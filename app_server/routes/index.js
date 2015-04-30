@@ -5,6 +5,14 @@ var ctrlLocations = require('../controllers/locations');
 var ctrlOthers = require('../controllers/others');
 
 /* GET home page. */
-router.get('/', ctrlMain.index);
+//router.get('/', ctrlMain.index);
+
+/* Locations pages */
+router.get('/', ctrlLocations.homelist);
+router.get('/location', ctrlLocations.locationInfo);
+router.get('/location/review/new', ctrlLocations.addReview);
+
+/* Other pages */
+router.get('/about', ctrlMain.about);
 
 module.exports = router;
