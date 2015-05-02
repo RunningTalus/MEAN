@@ -4,7 +4,7 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+require('./app_server/models/db');
 var routes = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
 
